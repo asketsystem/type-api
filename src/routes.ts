@@ -1,9 +1,5 @@
-const express = require("express");
-const router = express.Router();
-// my routes paths and methods
+import globalRoute from './routes/global'
 
-// single basic route at the base path of your application
-router.get("/", (req, res) => {
-  res.send("API online");
-});
-module.exports = router;
+const routes = [globalRoute]
+
+export default routes

@@ -1,16 +1,16 @@
-const express = require("express");
+import express from 'express'
 
 // import our local router file
-const routes = require("./routes");
+import routes from './routes'
 
 // init express app
-const app = express();
+const app = express()
 
 // allow express to work with json
-app.use(express.json());
+app.use(express.json())
 
 // router
-app.use(routes);
+app.use(routes)
 
 // export app to import into server.js
-module.exports = app;
+export default app

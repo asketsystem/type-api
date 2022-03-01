@@ -1,4 +1,4 @@
 const globalControllers = {
-    healthyCheck(req, res) { res.send('<h2>API is running</h2>') }
+    healthyCheck(req: any, res: any) { res.send('<h2>API is running</h2>') }
     }
-    module.exports = globalControllers
+    export default globalControllers

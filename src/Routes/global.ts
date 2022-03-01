@@ -1,15 +1,9 @@
-const express = require("express");
-const router = express.Router();
+import express from 'express'
 
-const globalControllers = {
-  healthyCheck(req, res) {
-    res.send("<h2>API is running</h2>");
-  },
-};
-module.exports = globalControllers;
+import globalController from './../controllers/global'
 
-// routes paths and methods
-router.get("/api", (req, res) => {
-  res.send("API online");
-});
-module.exports = router;
+const router = express.Router()
+// your routes paths and methods
+// single basic route at the base path of your application
+router.get('/', globalController.healthyCheck)
+export default router
